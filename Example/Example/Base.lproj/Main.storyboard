@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NPOStreamExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,33 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smR-zm-CHL">
-                                <state key="normal" title=" Bekijk NPO 3!"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c32-Ty-ZS8">
+                                <state key="normal" title="Bekijk NPO 3!"/>
                                 <connections>
-                                    <action selector="viewButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hkl-N8-l9q"/>
+                                    <action selector="viewChannelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ea1-du-2xd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="smR-zm-CHL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xgz-tk-Gpn"/>
-                            <constraint firstItem="smR-zm-CHL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v5d-UL-hAM"/>
+                            <constraint firstItem="c32-Ty-ZS8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pte-fz-m0J"/>
+                            <constraint firstItem="c32-Ty-ZS8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vny-W4-YMo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="1cm-44-bZS" kind="presentation" identifier="player" id="3rd-fY-KEn"/>
+                        <segue destination="7fN-iy-70i" kind="presentation" identifier="player" id="xux-bV-1Yz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
         <!--AV Player View Controller-->
-        <scene sceneID="7LM-n4-fEv">
+        <scene sceneID="VEX-e6-ELD">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="1cm-44-bZS" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qE3-tl-yhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="7fN-iy-70i" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVh-g2-AUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="36"/>
+            <point key="canvasLocation" x="649" y="36"/>
         </scene>
     </scenes>
 </document>

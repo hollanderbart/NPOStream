@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class NPOStream: NSObject {
+public class NPOStream {
 
     public static func getStream(url: String, onCompletion: (URL) -> Void) {
     

@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-NPOStreamExample.xcscheme</key>
+		<key>Pods-Example.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A3DB4009A13E86B9A8DD8E8E5520E8CE</key>
+		<key>344E4CCFD24752562A4AA655EC1DED9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F145333C8DF62701AC2AAC7E67A4DBA8</key>
+		<key>A3DB4009A13E86B9A8DD8E8E5520E8CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

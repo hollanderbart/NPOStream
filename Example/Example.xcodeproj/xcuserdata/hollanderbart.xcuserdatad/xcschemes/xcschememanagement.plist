@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>NPOStreamExample.xcscheme</key>
+		<key>Example.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D3C1E4C1D3C0A7200D19BFB</key>
+		<key>1D4B92071D3C2323004EC904</key>
 		<dict>
 			<key>primary</key>
 			<true/>

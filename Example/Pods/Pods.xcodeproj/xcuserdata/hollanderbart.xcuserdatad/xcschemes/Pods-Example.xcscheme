@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D3C1E4C1D3C0A7200D19BFB"
-               BuildableName = "NPOStreamExample.app"
-               BlueprintName = "NPOStreamExample"
-               ReferencedContainer = "container:NPOStreamExample.xcodeproj">
+               BlueprintIdentifier = "344E4CCFD24752562A4AA655EC1DED9D"
+               BuildableName = "Pods_Example.framework"
+               BlueprintName = "Pods-Example"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D3C1E4C1D3C0A7200D19BFB"
-            BuildableName = "NPOStreamExample.app"
-            BlueprintName = "NPOStreamExample"
-            ReferencedContainer = "container:NPOStreamExample.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D3C1E4C1D3C0A7200D19BFB"
-            BuildableName = "NPOStreamExample.app"
-            BlueprintName = "NPOStreamExample"
-            ReferencedContainer = "container:NPOStreamExample.xcodeproj">
+            BlueprintIdentifier = "344E4CCFD24752562A4AA655EC1DED9D"
+            BuildableName = "Pods_Example.framework"
+            BlueprintName = "Pods-Example"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D3C1E4C1D3C0A7200D19BFB"
-            BuildableName = "NPOStreamExample.app"
-            BlueprintName = "NPOStreamExample"
-            ReferencedContainer = "container:NPOStreamExample.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
