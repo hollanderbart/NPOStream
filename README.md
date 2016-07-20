@@ -1,4 +1,4 @@
-# NPOStreamLiveTV
+# NPOStream
 iOS Swift framework to get dynamic stream URL of the Dutch TV broadcasting studio NPO.
 
 # Usage
