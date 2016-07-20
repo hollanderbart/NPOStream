@@ -40,14 +40,13 @@ extension String {
 			return self
 		}
 		
-		return self.subString(startIndex: 0, length: index) + String(character) + self.subString(startIndex: index + 1, length: self.characters.count - index)
+		return self.subString(startIndex: 0, length: index) + String(character) + self.subString(startIndex: index + 1, length: self.characters.count)
 	}
 	
-	func subString(startIndex: Int, length: Int) -> String {
-		let start = self.characters.index(self.startIndex, offsetBy: startIndex)
-		let end = self.characters.index(self.startIndex, offsetBy: startIndex+length, limitedBy: self.characters.index(self.startIndex, offsetBy: self.characters.count))
-        
-        return self.substring(with: Range<String.Index>(start ..< end!))
+	public func subString(startIndex: Int, length: Int) -> String {
+        let start = self.characters.index(self.startIndex, offsetBy: startIndex)
+        let end = self.characters.index(self.startIndex, offsetBy: length)
+        return self.substring(with: Range<String.Index>(start ..< end))
 	}
     
     func htmlDecoded() -> String {
