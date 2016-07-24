@@ -10,12 +10,19 @@ import Foundation
 import UIKit
 
 public class NPOStream {
-
-    public static func getStream(url: String, onCompletion: (URL?, NSError?) -> Void) {
+    
+    public static func getStream(channelTitle: ChannelTitle, onCompletion: (URL?, NSError?) -> Void) {
     
     DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosUserInitiated).async {
-
-    let task = URLSession.shared.dataTask(with: NSURL(string: "http://ida.omroep.nl/npoplayer/i.js?s=\(url)")! as URL) { (data, response, error) in
+    
+    guard let stream = ChannelProvider.streams[channelTitle] else {
+        return onCompletion(nil, NSError(domain: "NPOStream error: ChannelTitle unknown", code: 999, userInfo: nil))
+    }
+    guard let streamURL = stream.url else {
+        return onCompletion(nil, NSError(domain: "NPOStream error: Channel URL not available", code: 999, userInfo: nil))
+    }
+        
+    let task = URLSession.shared.dataTask(with: URL(string: "http://ida.omroep.nl/npoplayer/i.js?s=\(streamURL)")!) { (data, response, error) in
 
         if let data = data {
             if let response = String(data: data, encoding: String.Encoding.utf8) {
@@ -48,7 +55,7 @@ public class NPOStream {
                     newToken = newToken.setCharAt(index: 13, character: first_character)
                 }
 
-                let supUrl = NSURL(string: "http://ida.omroep.nl/aapi/?type=jsonp&callback=?&stream=\(url)&token=\(newToken)")
+                let supUrl = URL(string: "http://ida.omroep.nl/aapi/?type=jsonp&callback=?&stream=\(streamURL)&token=\(newToken)")
                 
                 let task = URLSession.shared.dataTask(with: supUrl! as URL) { (data, response, error) in
                     guard let rawStreamURLData = data else {

@@ -1,9 +1,9 @@
 //
 //  String+Extension.swift
-//  NPO Live
+//  NPOStream
 //
 //  Created by Bart den Hollander on 21-11-15.
-//  Copyright © 2015 Maurice van Breukelen. All rights reserved.
+//  Copyright © 2016 Bart den Hollander. All rights reserved.
 //
 
 import Foundation

@@ -12,7 +12,7 @@ import NPOStream
 class MainViewController: UIViewController {
 
     @IBAction func viewChannelButtonPressed(_ sender: UIButton) {
-        NPOStream.getStream(url: "http://livestreams.omroep.nl/live/npo/tvlive/ned3/ned3.isml/ned3.m3u8") { (url: URL?, error: NSError?) in
+        NPOStream.getStream(channelTitle: ChannelTitle.NPO3) { (url: URL?, error: NSError?) in
             if error != nil {
                 print(error)
                 return
