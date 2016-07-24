@@ -15,6 +15,11 @@ public enum ChannelTitle: String {
     case NPONieuws = "NPO Nieuws"
     case NPOPolitiek = "NPO Politiek"
     case NPOBest = "NPO Best"
+    case NPODoc = "NPO Doc"
+    case NPO101 = "NPO 101"
+    case NPOCultura = "NPO Cultura"
+    case NPOZappXtra = "NPO Zapp Xtra"
+    case NPOHumor = "NPO Humor TV"
 }
 
 public class ChannelProvider {
@@ -38,21 +43,21 @@ public class ChannelProvider {
         ChannelTitle.NPOBest:Channel(
             title: ChannelTitle.NPOBest.rawValue,
             url: URL(type: .Thema, name: "best24")),
-//        Channel(
-//            title: "NPO Doc",
-//            url: URL(type: .Thema, name: "hollanddoc24")),
-//        Channel(
-//            title: "NPO 101",
-//            url: URL(type: .Thema, name: "101tv")),
-//        Channel(
-//            title: "NPO Cultura",
-//            url: URL(type: .Thema, name: "cultura24")),
-//        Channel(
-//            title: "NPO Zapp Xtra",
-//            url: URL(type: .Thema, name: "zappelin24")),
-//        Channel(
-//            title: "NPO Humor tv",
-//            url: URL(type: .Thema, name: "humor24"))
+        ChannelTitle.NPODoc:Channel(
+            title: ChannelTitle.NPODoc.rawValue,
+            url: URL(type: .Thema, name: "hollanddoc24")),
+        ChannelTitle.NPO101:Channel(
+            title: ChannelTitle.NPO101.rawValue,
+            url: URL(type: .Thema, name: "101tv")),
+        ChannelTitle.NPOCultura:Channel(
+            title: ChannelTitle.NPOCultura.rawValue,
+            url: URL(type: .Thema, name: "cultura24")),
+        ChannelTitle.NPOZappXtra:Channel(
+            title: ChannelTitle.NPOZappXtra.rawValue,
+            url: URL(type: .Thema, name: "zappelin24")),
+        ChannelTitle.NPOHumor:Channel(
+            title: ChannelTitle.NPOHumor.rawValue,
+            url: URL(type: .Thema, name: "humor24"))
     ]
     
 }
