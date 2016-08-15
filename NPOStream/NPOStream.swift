@@ -13,7 +13,7 @@ public class NPOStream {
     
     public static func getStream(channelTitle: ChannelTitle, onCompletion: (URL?, NSError?) -> Void) {
     
-    DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosUserInitiated).async {
+    DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
     
     guard let stream = ChannelProvider.streams[channelTitle] else {
         return onCompletion(nil, NSError(domain: "NPOStream error: ChannelTitle unknown", code: 999, userInfo: nil))
@@ -46,13 +46,13 @@ public class NPOStream {
                 if(secondPosition != 0){
                     let first_digit = newToken[firstPosition];
                     let second_digit = newToken[secondPosition];
-                    newToken = newToken.setCharAt(index: firstPosition, character: second_digit)
-                    newToken = newToken.setCharAt(index: secondPosition, character: first_digit)
+                    newToken = newToken.setCharAt(firstPosition, character: second_digit)
+                    newToken = newToken.setCharAt(secondPosition, character: first_digit)
                 } else {
                     let first_character = newToken[12];
                     let second_character = newToken[13];
-                    newToken = newToken.setCharAt(index: 12, character: second_character)
-                    newToken = newToken.setCharAt(index: 13, character: first_character)
+                    newToken = newToken.setCharAt(12, character: second_character)
+                    newToken = newToken.setCharAt(13, character: first_character)
                 }
 
                 let supUrl = URL(string: "http://ida.omroep.nl/aapi/?type=jsonp&callback=?&stream=\(streamURL)&token=\(newToken)")
@@ -64,7 +64,7 @@ public class NPOStream {
                     guard let rawStreamURLString = String.init(data: rawStreamURLData, encoding: String.Encoding.utf8) else {
                         return onCompletion(nil, NSError(domain: "NPOStream error: Initialising 2st URL Data to string failed", code: 999, userInfo: nil))
                     }
-                    let streamURLString = rawStreamURLString.subString(startIndex: 2, length: rawStreamURLString.characters.count - 1)
+                    let streamURLString = rawStreamURLString.subString(2, length: rawStreamURLString.characters.count - 1)
                     guard let streamURLStringData = streamURLString.data(using: String.Encoding.utf8) else {
                         return onCompletion(nil, NSError(domain: "NPOStream error: Converting string to data failed", code: 999, userInfo: nil))
                     }
@@ -85,7 +85,7 @@ public class NPOStream {
                             guard let response = String(data: finalStreamURL, encoding: String.Encoding.utf8) else {
                                 return onCompletion(nil, NSError(domain: "NPOStream error: Parsing final URL data to string failed", code: 999, userInfo: nil))
                             }
-                            guard let url:String = response.sliceFrom(start: "setSource(\"", to: "\"") else {
+                            guard let url:String = response.sliceFrom("setSource(\"", to: "\"") else {
                                 return onCompletion(nil, NSError(domain: "NPOStream error: Unwrapping after string slicing failed", code: 999, userInfo: nil))
                             }
                             let finalUrl = URL(string: url.decodeJSONUri)

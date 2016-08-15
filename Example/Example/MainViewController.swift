@@ -12,7 +12,7 @@ import NPOStream
 class MainViewController: UIViewController {
 
     @IBAction func viewChannelButtonPressed(_ sender: UIButton) {
-        NPOStream.getStream(channelTitle: ChannelTitle.NPO3) { (url: URL?, error: NSError?) in
+        NPOStream.getStream(channelTitle: ChannelTitle.NPO1) { (url: URL?, error: NSError?) in
             if error != nil {
                 print(error)
                 return
@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "player" {
-            if let destination = segue.destinationViewController as? PlayerViewController {
+            if let destination = segue.destination as? PlayerViewController {
                 destination.url = sender as! URL
             }
         }

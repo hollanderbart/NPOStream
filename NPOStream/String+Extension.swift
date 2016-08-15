@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     
-	func sliceFrom(start: String, to: String) -> String? {
+	func sliceFrom(_ start: String, to: String) -> String? {
 		return (range(of: start)?.upperBound)
             .flatMap { sInd in
 			(range(of: to, range: sInd ..< endIndex)?.lowerBound)
@@ -35,15 +35,15 @@ extension String {
 		}
 	}
 	
-	func setCharAt(index: Int, character: Character) -> String {
+	func setCharAt(_ index: Int, character: Character) -> String {
 		if index > self.characters.count - 1 {
 			return self
 		}
 		
-		return self.subString(startIndex: 0, length: index) + String(character) + self.subString(startIndex: index + 1, length: self.characters.count)
+		return self.subString(0, length: index) + String(character) + self.subString(index + 1, length: self.characters.count)
 	}
 	
-	public func subString(startIndex: Int, length: Int) -> String {
+	public func subString(_ startIndex: Int, length: Int) -> String {
         let start = self.characters.index(self.startIndex, offsetBy: startIndex)
         let end = self.characters.index(self.startIndex, offsetBy: length)
         return self.substring(with: Range<String.Index>(start ..< end))
