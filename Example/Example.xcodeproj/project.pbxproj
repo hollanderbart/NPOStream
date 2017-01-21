@@ -130,6 +130,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 7S7JD544LJ;
 						DevelopmentTeamName = "C. M. den Hollander";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -339,7 +340,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E4009BC282C003C4DD96E9A /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -353,7 +353,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C14DA12A6E5046B5201E573 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

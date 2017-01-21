@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C0D539A2BAE98CF1F8A617E7831913F4'
+               BlueprintIdentifier = 'ECB922D641264BB456105BC33E79C3DB'
                BlueprintName = 'NPOStream'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'NPOStream.framework'>

@@ -13,11 +13,11 @@ enum ChannelType: String {
     case Thema = "thematv"
 }
 
-class Channel {
-    var title: String
-    var url: URL?
+public class Channel {
+    public var title: String
+    public var url: URL?
     
-    init(title: String, url: URL?) {
+    public init(title: String, url: URL?) {
         self.title = title
         self.url = url
     }

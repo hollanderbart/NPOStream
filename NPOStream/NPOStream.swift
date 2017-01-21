@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-public class NPOStream {
+open class NPOStream {
     
-    public static func getStream(channelTitle: ChannelTitle, onCompletion: (URL?, NSError?) -> Void) {
+    open static func getStream(_ channelTitle: ChannelTitle, onCompletion: @escaping (URL?, NSError?) -> Void) {
     
-    DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
+    DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
     
     guard let stream = ChannelProvider.streams[channelTitle] else {
         return onCompletion(nil, NSError(domain: "NPOStream error: ChannelTitle unknown", code: 999, userInfo: nil))
@@ -22,7 +22,7 @@ public class NPOStream {
         return onCompletion(nil, NSError(domain: "NPOStream error: Channel URL not available", code: 999, userInfo: nil))
     }
         
-    let task = URLSession.shared.dataTask(with: URL(string: "http://ida.omroep.nl/npoplayer/i.js?s=\(streamURL)")!) { (data, response, error) in
+    let FirstURLtask = URLSession.shared.dataTask(with: URL(string: "http://ida.omroep.nl/npoplayer/i.js?s=\(streamURL)")!) { (data, response, error) in
 
         if let data = data {
             if let response = String(data: data, encoding: String.Encoding.utf8) {
@@ -57,7 +57,7 @@ public class NPOStream {
 
                 let supUrl = URL(string: "http://ida.omroep.nl/aapi/?type=jsonp&callback=?&stream=\(streamURL)&token=\(newToken)")
                 
-                let task = URLSession.shared.dataTask(with: supUrl! as URL) { (data, response, error) in
+                let SecondURLtask = URLSession.shared.dataTask(with: supUrl! as URL) { (data, response, error) in
                     guard let rawStreamURLData = data else {
                         return onCompletion(nil, NSError(domain: "NPOStream error: Unwrapping 2st URL failed", code: 999, userInfo: nil))
                     }
@@ -75,10 +75,10 @@ public class NPOStream {
                         guard let streamURL = rawStreamURLJSON["stream"] else {
                             return onCompletion(nil, NSError(domain: "NPOStream error: Get stream URL from JSON failed", code: 999, userInfo: nil))
                         }
-                        guard let url = URL.init(string: String(streamURL)) else {
+                        guard let url = URL(string: streamURL as! String) else {
                             return onCompletion(nil, NSError(domain: "NPOStream error: Initialising final URL from string failed", code: 999, userInfo: nil))
                         }
-                        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                        let ThirdURLtask = URLSession.shared.dataTask(with: url) { (data, response, error) in
                             guard let finalStreamURL = data else {
                                 return onCompletion(nil, NSError(domain: "NPOStream error: Unwrapping final URL failed", code: 999, userInfo: nil))
                             }
@@ -94,17 +94,17 @@ public class NPOStream {
                                 onCompletion(finalUrl, nil)
                             })
                         }
-                        task.resume()
+                        ThirdURLtask.resume()
                     }
                     catch {
                         return onCompletion(nil, NSError(domain: "NPOStream error: JSON Serialization failed with error: \(error)", code: 999, userInfo: nil))
                     }
                 }
-                task.resume()
+                SecondURLtask.resume()
             }
         }
         }
-    task.resume()
+    FirstURLtask.resume()
     }
     }
     
