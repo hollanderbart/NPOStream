@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "NPOStream"
   s.version      = "0.0.4"
-  s.summary      = "iOS Swift framework to get dynamic stream URL of the Dutch TV broadcasting studio NPO."
+  s.summary      = "Swift framework to get real-time streams of Dutch broadcasting studio (NPO)."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
