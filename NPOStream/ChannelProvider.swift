@@ -9,17 +9,18 @@
 import Foundation
 
 public enum ChannelTitle: String {
-    case NPO1 = "NPO 1"
-    case NPO2 = "NPO 2"
-    case NPO3 = "NPO 3"
-    case NPONieuws = "NPO Nieuws"
-    case NPOPolitiek = "NPO Politiek"
-    case NPOBest = "NPO Best"
-    case NPODoc = "NPO Doc"
-    case NPO101 = "NPO 101"
-    case NPOCultura = "NPO Cultura"
-    case NPOZappXtra = "NPO Zapp Xtra"
-    case NPOHumor = "NPO Humor TV"
+    case NPO1 = "LI_NL1_4188102"
+    case NPO2 = "LI_NL2_4188105"
+    case NPO3 = "LI_NL3_4188107"
+    case NPONieuws = "LI_NEDERLAND1_221673"
+    case NPOPolitiek = "LI_NEDERLAND1_221675"
+    case NPO101 = "LI_NEDERLAND3_221683"
+    case NPOCultura = "LI_NEDERLAND2_221679"
+    case NPOZappXtra = "LI_NEDERLAND3_221687"
+    case NPORadio1 = "LI_RADIO1_300877"
+    case NPORadio2 = "LI_RADIO2_300879"
+    case NPO3FM = "LI_3FM_300881"
+    case NPORadio4 = "LI_RA4_698901"
 }
 
 public class ChannelProvider {
@@ -45,41 +46,5 @@ public class ChannelProvider {
             return array
         }
     }
-    
-    public static let streams:[ChannelTitle:Channel] = [
-        ChannelTitle.NPO1:Channel(
-            title: ChannelTitle.NPO1.rawValue,
-            url: URL(type: .Live, name: "ned1")),
-        ChannelTitle.NPO2:Channel(
-            title: ChannelTitle.NPO2.rawValue,
-            url: URL(type: .Live, name: "ned2")),
-        ChannelTitle.NPO3:Channel(
-            title: ChannelTitle.NPO3.rawValue,
-            url: URL(type: .Live, name: "ned3")),
-        ChannelTitle.NPONieuws:Channel(
-            title: ChannelTitle.NPONieuws.rawValue,
-            url: URL(type: .Thema, name: "journaal24")),
-        ChannelTitle.NPOPolitiek:Channel(
-            title: ChannelTitle.NPOPolitiek.rawValue,
-            url: URL(type: .Thema, name: "politiek24")),
-        ChannelTitle.NPOBest:Channel(
-            title: ChannelTitle.NPOBest.rawValue,
-            url: URL(type: .Thema, name: "best24")),
-        ChannelTitle.NPODoc:Channel(
-            title: ChannelTitle.NPODoc.rawValue,
-            url: URL(type: .Thema, name: "hollanddoc24")),
-        ChannelTitle.NPO101:Channel(
-            title: ChannelTitle.NPO101.rawValue,
-            url: URL(type: .Thema, name: "101tv")),
-        ChannelTitle.NPOCultura:Channel(
-            title: ChannelTitle.NPOCultura.rawValue,
-            url: URL(type: .Thema, name: "cultura24")),
-        ChannelTitle.NPOZappXtra:Channel(
-            title: ChannelTitle.NPOZappXtra.rawValue,
-            url: URL(type: .Thema, name: "zappelin24")),
-        ChannelTitle.NPOHumor:Channel(
-            title: ChannelTitle.NPOHumor.rawValue,
-            url: URL(type: .Thema, name: "humor24"))
-    ]
     
 }

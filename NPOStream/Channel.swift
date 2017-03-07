@@ -8,11 +8,6 @@
 
 import Foundation
 
-enum ChannelType: String {
-    case Live = "tvlive"
-    case Thema = "thematv"
-}
-
 public class Channel {
     public var title: String
     public var url: URL?

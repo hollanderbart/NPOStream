@@ -1,6 +1,20 @@
-![NPO channels](http://iculture.textopus.nl/wp-content/uploads/2015/11/npo-live-overzicht.png)
 # NPOStream
 Swift framework to get real-time streams of Dutch broadcasting studio (NPO).
+
+| Available NPO channels    |
+| ------------------------- |
+| NPO1                      |
+| NPO2                      |
+| NPO3                      |
+| NPONieuws                 |
+| NPOPolitiek               |
+| NPO101                    |
+| NPOCultura                |
+| NPOZappXtra               |
+| NPORadio1                 |
+| NPORadio2                 |
+| NPO3FM                    |
+| NPORadio4                 |
 
 # Usage
 1. Import framework in Xcode project using Cocoapods ```pod "NPOStream"```
@@ -9,22 +23,6 @@ Swift framework to get real-time streams of Dutch broadcasting studio (NPO).
 
 ```NPOStream.getStream(ChannelTitle, onCompletion: (URL?, NSError?) -> Void)```
 
-This is the list of the available NPO TV channels:
-```
-public enum ChannelTitle: String {
-    case NPO1 = "NPO 1"
-    case NPO2 = "NPO 2"
-    case NPO3 = "NPO 3"
-    case NPONieuws = "NPO Nieuws"
-    case NPOPolitiek = "NPO Politiek"
-    case NPOBest = "NPO Best"
-    case NPODoc = "NPO Doc"
-    case NPO101 = "NPO 101"
-    case NPOCultura = "NPO Cultura"
-    case NPOZappXtra = "NPO Zapp Xtra"
-    case NPOHumor = "NPO Humor TV"
-}
-```
 
 # Example
 ```

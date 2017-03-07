@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1D6A52831D44C5A000BA9C72 /* ChannelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A52821D44C5A000BA9C72 /* ChannelProvider.swift */; };
-		1DD3B6D61D4405F20046480B /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD3B6D51D4405F20046480B /* URL+Extension.swift */; };
 		1DD3B6D81D4406A30046480B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD3B6D71D4406A30046480B /* Channel.swift */; };
 		1DE996161D3AC81400CE22BF /* NPOStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE996141D3AC81400CE22BF /* NPOStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9961D1D3AC84600CE22BF /* NPOStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9961C1D3AC84600CE22BF /* NPOStream.swift */; };
@@ -17,7 +16,6 @@
 
 /* Begin PBXFileReference section */
 		1D6A52821D44C5A000BA9C72 /* ChannelProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelProvider.swift; sourceTree = "<group>"; };
-		1DD3B6D51D4405F20046480B /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		1DD3B6D71D4406A30046480B /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		1DE996111D3AC81400CE22BF /* NPOStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NPOStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE996141D3AC81400CE22BF /* NPOStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPOStream.h; sourceTree = "<group>"; };
@@ -50,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				1DE9961E1D3AC88F00CE22BF /* String+Extension.swift */,
-				1DD3B6D51D4405F20046480B /* URL+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -166,7 +163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD3B6D81D4406A30046480B /* Channel.swift in Sources */,
-				1DD3B6D61D4405F20046480B /* URL+Extension.swift in Sources */,
 				1DE9961F1D3AC88F00CE22BF /* String+Extension.swift in Sources */,
 				1D6A52831D44C5A000BA9C72 /* ChannelProvider.swift in Sources */,
 				1DE9961D1D3AC84600CE22BF /* NPOStream.swift in Sources */,
