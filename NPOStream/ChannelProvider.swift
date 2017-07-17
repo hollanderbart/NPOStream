@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ChannelTitle: String {
+public enum ChannelStreamTitle: String {
     case NPO1 = "LI_NL1_4188102"
     case NPO2 = "LI_NL2_4188105"
     case NPO3 = "LI_NL3_4188107"
@@ -21,6 +21,7 @@ public enum ChannelTitle: String {
     case NPORadio2 = "LI_RADIO2_300879"
     case NPO3FM = "LI_3FM_300881"
     case NPORadio4 = "LI_RA4_698901"
+    case NPOFunX = "LI_3FM_603983"
 }
 
 public class ChannelProvider {
@@ -37,14 +38,62 @@ public class ChannelProvider {
         }
     }
     
-    public static var channelArray: [ChannelTitle] {
-        get {
-            var array: [ChannelTitle] = []
-            for channel in self.iterateEnum(ChannelTitle) {
-                array.append(channel)
-            }
-            return array
-        }
-    }
-    
+    public static let streams = [
+        Channel(
+            title: "NPO 1",
+            streamTitle: ChannelStreamTitle.NPO1,
+            //			urlForShowInformation: URL(string: "http://www.npo.nl/live/npo-1"),
+            url: nil),
+        Channel(
+            title: "NPO 2",
+            streamTitle: ChannelStreamTitle.NPO2,
+            //			urlForShowInformation: URL(string: "http://www.npo.nl/live/npo-2"),
+            url: nil),
+        Channel(
+            title: "NPO 3",
+            streamTitle: ChannelStreamTitle.NPO3,
+            //			urlForShowInformation: URL(string: "http://www.npo.nl/live/npo-3"),
+            url: nil),
+        Channel(
+            title: "NPO Nieuws",
+            streamTitle: ChannelStreamTitle.NPONieuws,
+            url: nil),
+        Channel(
+            title: "NPO Politiek",
+            streamTitle: ChannelStreamTitle.NPOPolitiek,
+            url: nil),
+        Channel(
+            title: "NPO 101",
+            streamTitle: ChannelStreamTitle.NPO101,
+            url: nil),
+        Channel(
+            title: "NPO Cultura",
+            streamTitle: ChannelStreamTitle.NPOCultura,
+            url: nil),
+        Channel(
+            title: "NPO Zapp",
+            streamTitle: ChannelStreamTitle.NPOZappXtra,
+            url: nil),
+        Channel(
+            title: "NPO Radio 1",
+            streamTitle: ChannelStreamTitle.NPORadio1,
+            url: nil),
+        Channel(
+            title: "NPO Radio 2",
+            streamTitle: ChannelStreamTitle.NPORadio2,
+            url: nil),
+        Channel(
+            title: "NPO 3FM",
+            streamTitle: ChannelStreamTitle.NPO3FM,
+            url: nil),
+        Channel(
+            title: "NPO Radio 4",
+            streamTitle: ChannelStreamTitle.NPORadio4,
+            url: nil),
+        Channel(
+            title: "NPO FunX",
+            streamTitle: ChannelStreamTitle.NPOFunX,
+            url: nil)
+    ]
+        
 }

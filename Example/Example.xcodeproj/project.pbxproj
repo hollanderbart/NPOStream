@@ -128,7 +128,7 @@
 				TargetAttributes = {
 					1D4B92071D3C2323004EC904 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 7S7JD544LJ;
+						DevelopmentTeam = Z8Q4P9RU5D;
 						DevelopmentTeamName = "C. M. den Hollander";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
@@ -341,9 +341,10 @@
 			baseConfigurationReference = 6E4009BC282C003C4DD96E9A /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z8Q4P9RU5D;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bdh.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = "bdh.NPOStream-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -354,9 +355,10 @@
 			baseConfigurationReference = 7C14DA12A6E5046B5201E573 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Z8Q4P9RU5D;
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bdh.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = "bdh.NPOStream-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

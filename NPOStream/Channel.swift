@@ -10,10 +10,13 @@ import Foundation
 
 public class Channel {
     public var title: String
+    public var streamTitle: ChannelStreamTitle
     public var url: URL?
+    public var activeShow: String?
     
-    public init(title: String, url: URL?) {
+    public init(title: String, streamTitle: ChannelStreamTitle, url: URL?) {
         self.title = title
+        self.streamTitle = streamTitle
         self.url = url
     }
 }

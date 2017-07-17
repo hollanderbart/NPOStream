@@ -11,7 +11,7 @@ import UIKit
 
 open class NPOStream {
     
-    open static func getStream(_ channelTitle: ChannelTitle, onCompletion: @escaping (URL?, NSError?) -> Void) {
+    open static func getStream(_ channelTitle: ChannelStreamTitle, onCompletion: @escaping (URL?, NSError?) -> Void) {
     
     let API_URL = "http://ida.omroep.nl/app.php/"
     let TOKEN_URL = "http://ida.omroep.nl/app.php/auth"
