@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GgZ-lp-2YN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="hkT-Ng-ohU">
+            <objects>
+                <viewController id="GgZ-lp-2YN" customClass="MainViewController" customModule="NPOStreamTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f2T-cP-PVu"/>
+                        <viewControllerLayoutGuide type="bottom" id="K7d-iX-kQi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c4z-34-hco">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLx-it-dKu">
+                                <rect key="frame" x="140.5" y="318.5" width="94" height="30"/>
+                                <state key="normal" title="Bekijk NPO 3!"/>
+                                <connections>
+                                    <action selector="viewChannelButtonPressed:" destination="GgZ-lp-2YN" eventType="touchUpInside" id="mHZ-Sk-yMP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uLx-it-dKu" firstAttribute="centerX" secondItem="c4z-34-hco" secondAttribute="centerX" id="a3R-hq-RFj"/>
+                            <constraint firstItem="uLx-it-dKu" firstAttribute="centerY" secondItem="c4z-34-hco" secondAttribute="centerY" id="vxS-zO-ugz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g5W-JA-wLO"/>
+                    </view>
+                    <connections>
+                        <segue destination="b1t-iC-YID" kind="presentation" identifier="showPlayer" id="vn0-Bd-fOA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDw-Wu-2Yr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="37"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="ahp-n5-WZR">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="b1t-iC-YID" customClass="PlayerViewController" customModule="NPOStreamTestApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTF-VX-Vzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="36"/>
+        </scene>
+    </scenes>
+</document>

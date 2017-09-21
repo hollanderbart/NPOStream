@@ -1,6 +1,0 @@
-framework module NPOStream {
-  umbrella header "NPOStream-umbrella.h"
-
-  export *
-  module * { export * }
-}
