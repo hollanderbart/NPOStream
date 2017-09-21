@@ -12,17 +12,13 @@ extension String {
     
     func sliceFrom(_ start: String, to: String) -> String? {
         return (range(of: start)?.upperBound)
-            .flatMap { sInd in
-            (range(of: to, range: sInd ..< endIndex)?.lowerBound)
-                .map { eInd in
-                String(self[sInd..<eInd])
+            .flatMap { startIndex in
+                (range(of: to, range: startIndex..<endIndex)?.lowerBound)
+                    .map { endIndex in
+                        String(self[startIndex..<endIndex])
             }
         }
     }
-	
-//    var encodeURIComponent: String? {
-//        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-//    }
 
     var decodeJSONUri: String {
         return self.replacingOccurrences(of: "\\/", with: "/")
