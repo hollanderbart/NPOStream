@@ -37,11 +37,11 @@ class MainViewController: UIViewController {
     
     // MARK: - Private
     
-    private func brieflyChangeButtonLabel(_ title: String?) {
+    private func brieflyChangeButtonLabel(_ title: String?, _ titleColor: UIColor? = .red) {
         let backupTitle = viewChannelButton.title(for: .normal)
         let backupTitleColor = viewChannelButton.titleColor(for: .normal)
         self.viewChannelButton.setTitle(title, for: .normal)
-        self.viewChannelButton.setTitleColor(.red, for: .normal)
+        self.viewChannelButton.setTitleColor(titleColor, for: .normal)
         
         let time = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: time, execute: { [weak self] in
