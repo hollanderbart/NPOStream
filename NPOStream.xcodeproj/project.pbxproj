@@ -12,6 +12,7 @@
 		1DE996161D3AC81400CE22BF /* NPOStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE996141D3AC81400CE22BF /* NPOStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9961D1D3AC84600CE22BF /* NPOStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9961C1D3AC84600CE22BF /* NPOStream.swift */; };
 		1DE9961F1D3AC88F00CE22BF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9961E1D3AC88F00CE22BF /* String+Extension.swift */; };
+		93D0252F1F7A39180061EF87 /* NPOStreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0252E1F7A39180061EF87 /* NPOStreamError.swift */; };
 		93D4048A1F745BA200DA5DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D404891F745BA200DA5DC5 /* AppDelegate.swift */; };
 		93D4048F1F745BA200DA5DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D4048D1F745BA200DA5DC5 /* Main.storyboard */; };
 		93D404911F745BA200DA5DC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D404901F745BA200DA5DC5 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		93D4049C1F745C7300DA5DC5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D4049A1F745C7300DA5DC5 /* PlayerViewController.swift */; };
 		93D4049E1F745CBF00DA5DC5 /* NPOStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE996111D3AC81400CE22BF /* NPOStream.framework */; };
 		93D4049F1F745CBF00DA5DC5 /* NPOStream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE996111D3AC81400CE22BF /* NPOStream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		93FA711A1F7A3A6E00925DD2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA71191F7A3A6E00925DD2 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		1DE996151D3AC81400CE22BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DE9961C1D3AC84600CE22BF /* NPOStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NPOStream.swift; sourceTree = "<group>"; };
 		1DE9961E1D3AC88F00CE22BF /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		93D0252E1F7A39180061EF87 /* NPOStreamError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPOStreamError.swift; sourceTree = "<group>"; };
 		93D404871F745BA200DA5DC5 /* NPOStreamTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPOStreamTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D404891F745BA200DA5DC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D4048E1F745BA200DA5DC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		93D404951F745BA200DA5DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D404991F745C7300DA5DC5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		93D4049A1F745C7300DA5DC5 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		93FA71191F7A3A6E00925DD2 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +125,23 @@
 		1DE996131D3AC81400CE22BF /* NPOStream */ = {
 			isa = PBXGroup;
 			children = (
+				93D0252D1F7A39000061EF87 /* Error */,
 				1DD3B6D41D4405D50046480B /* Extensions */,
 				1DD3B6D11D4405590046480B /* Model */,
 				1DE996141D3AC81400CE22BF /* NPOStream.h */,
 				1DE9961C1D3AC84600CE22BF /* NPOStream.swift */,
+				93FA71191F7A3A6E00925DD2 /* Result.swift */,
 				1DE996151D3AC81400CE22BF /* Info.plist */,
 			);
 			path = NPOStream;
+			sourceTree = "<group>";
+		};
+		93D0252D1F7A39000061EF87 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				93D0252E1F7A39180061EF87 /* NPOStreamError.swift */,
+			);
+			name = Error;
 			sourceTree = "<group>";
 		};
 		93D404881F745BA200DA5DC5 /* NPOStreamTestApp */ = {
@@ -263,9 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93FA711A1F7A3A6E00925DD2 /* Result.swift in Sources */,
 				1DD3B6D81D4406A30046480B /* Channel.swift in Sources */,
 				1DE9961F1D3AC88F00CE22BF /* String+Extension.swift in Sources */,
 				1D6A52831D44C5A000BA9C72 /* ChannelProvider.swift in Sources */,
+				93D0252F1F7A39180061EF87 /* NPOStreamError.swift in Sources */,
 				1DE9961D1D3AC84600CE22BF /* NPOStream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

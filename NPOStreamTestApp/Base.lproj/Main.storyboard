@@ -37,6 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="g5W-JA-wLO"/>
                     </view>
                     <connections>
+                        <outlet property="viewChannelButton" destination="uLx-it-dKu" id="MGD-Fl-8KD"/>
                         <segue destination="b1t-iC-YID" kind="presentation" identifier="showPlayer" id="vn0-Bd-fOA"/>
                     </connections>
                 </viewController>

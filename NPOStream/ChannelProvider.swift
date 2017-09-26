@@ -30,17 +30,14 @@ public struct ChannelProvider {
         Channel(
             title: "NPO 1",
             streamTitle: ChannelStreamTitle.NPO1,
-            //			urlForShowInformation: URL(string: "http://www.npo.nl/live/npo-1"),
             url: nil),
         Channel(
             title: "NPO 2",
             streamTitle: ChannelStreamTitle.NPO2,
-            //			urlForShowInformation: URL(string: "http://www.npo.nl/live/npo-2"),
             url: nil),
         Channel(
             title: "NPO 3",
             streamTitle: ChannelStreamTitle.NPO3,
-            //			urlForShowInformation: URL(string: "http://www.npo.nl/live/npo-3"),
             url: nil),
         Channel(
             title: "NPO Nieuws",
@@ -83,5 +80,4 @@ public struct ChannelProvider {
             streamTitle: ChannelStreamTitle.NPOFunX,
             url: nil)
     ]
-        
 }
