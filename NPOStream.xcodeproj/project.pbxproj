@@ -12,6 +12,7 @@
 		1DE996161D3AC81400CE22BF /* NPOStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE996141D3AC81400CE22BF /* NPOStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9961D1D3AC84600CE22BF /* NPOStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9961C1D3AC84600CE22BF /* NPOStream.swift */; };
 		1DE9961F1D3AC88F00CE22BF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9961E1D3AC88F00CE22BF /* String+Extension.swift */; };
+		937D5D791FABBA010073326B /* NPOStream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE996111D3AC81400CE22BF /* NPOStream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93D0252F1F7A39180061EF87 /* NPOStreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D0252E1F7A39180061EF87 /* NPOStreamError.swift */; };
 		93D4048A1F745BA200DA5DC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D404891F745BA200DA5DC5 /* AppDelegate.swift */; };
 		93D4048F1F745BA200DA5DC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D4048D1F745BA200DA5DC5 /* Main.storyboard */; };
@@ -20,7 +21,6 @@
 		93D4049B1F745C7300DA5DC5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D404991F745C7300DA5DC5 /* MainViewController.swift */; };
 		93D4049C1F745C7300DA5DC5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D4049A1F745C7300DA5DC5 /* PlayerViewController.swift */; };
 		93D4049E1F745CBF00DA5DC5 /* NPOStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE996111D3AC81400CE22BF /* NPOStream.framework */; };
-		93D4049F1F745CBF00DA5DC5 /* NPOStream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DE996111D3AC81400CE22BF /* NPOStream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93FA711A1F7A3A6E00925DD2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA71191F7A3A6E00925DD2 /* Result.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				93D4049F1F745CBF00DA5DC5 /* NPOStream.framework in Embed Frameworks */,
+				937D5D791FABBA010073326B /* NPOStream.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -507,7 +507,7 @@
 				DEVELOPMENT_TEAM = 7S7JD544LJ;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NPOStreamTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bdh.NPOStreamTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,7 +537,7 @@
 				DEVELOPMENT_TEAM = 7S7JD544LJ;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NPOStreamTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bdh.NPOStreamTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
