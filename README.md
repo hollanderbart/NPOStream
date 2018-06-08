@@ -16,7 +16,10 @@ Swift framework to get real-time streams of Dutch broadcasting studio (NPO).
 | NPO3FM                    |
 | NPORadio4                 |
 
-# Usage
+### Version
+- 0.1.0: Version compatible with Swift 4.2 and Xcode 10.
+
+### Usage
 1. Import framework in Xcode project using Cocoapods ```pod "NPOStream"```
 2. Declare: ```import NPOStream``` on top of your swift file
 3. Call the NPOStream.getStream function with a ChannelTitle enum case. ChannelTitle is a enum with all available NPO TV channels that NPOStream can provide.
@@ -24,7 +27,7 @@ Swift framework to get real-time streams of Dutch broadcasting studio (NPO).
 ```NPOStream.getStream(ChannelTitle, onCompletion: (URL?, NSError?) -> Void)```
 
 
-# Example
+### Example
 ```
 NPOStream.getStream(ChannelTitle.NPO3) { (url: URL?, error: NSError?) in
   guard let streamURL = url, error == nil else { return }

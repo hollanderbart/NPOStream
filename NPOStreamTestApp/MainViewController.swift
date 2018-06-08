@@ -13,11 +13,10 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var viewChannelButton: UIButton!
     @IBAction func viewChannelButtonPressed(_ sender: UIButton) {
-        NPOStream.getStream(ChannelStreamTitle.NPO3) { [weak self] result in
+        NPOStream.getStreamURL(for: ChannelStreamTitle.NPO3) { [weak self] result in
             switch result {
             case .error(let error):
-                print(error)
-                self?.brieflyChangeButtonLabel(error.localizedDescription)
+                self?.brieflyChangeButtonLabel(error.errorDescription)
             case .success(let url):
                 print(url)
                 self?.performSegue(withIdentifier: "showPlayer", sender: url)
@@ -38,15 +37,15 @@ class MainViewController: UIViewController {
     // MARK: - Private
     
     private func brieflyChangeButtonLabel(_ title: String?, _ titleColor: UIColor? = .red) {
-        let backupTitle = viewChannelButton.title(for: .normal)
-        let backupTitleColor = viewChannelButton.titleColor(for: .normal)
-        self.viewChannelButton.setTitle(title, for: .normal)
-        self.viewChannelButton.setTitleColor(titleColor, for: .normal)
+        let backupTitle = viewChannelButton.title(for: UIControl.State.normal)
+        let backupTitleColor = viewChannelButton.titleColor(for: UIControl.State.normal)
+        self.viewChannelButton.setTitle(title, for: UIControl.State.normal)
+        self.viewChannelButton.setTitleColor(titleColor, for: UIControl.State.normal)
         
         let time = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: time, execute: { [weak self] in
-            self?.viewChannelButton.setTitle(backupTitle, for: .normal)
-            self?.viewChannelButton.setTitleColor(backupTitleColor, for: .normal)
+            self?.viewChannelButton.setTitle(backupTitle, for: UIControl.State.normal)
+            self?.viewChannelButton.setTitleColor(backupTitleColor, for: UIControl.State.normal)
         })
     }
 }

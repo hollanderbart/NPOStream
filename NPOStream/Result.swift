@@ -10,7 +10,7 @@ import Foundation
 
 public enum Result<Element> {
     case success(Element)
-    case error(Error)
+    case error(NPOStreamError)
     
     // Allow optional transforms (chaining).
     public func map<TransformedElement>(_ transform: (Element) throws -> TransformedElement) rethrows -> Result<TransformedElement> {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum ChannelStreamTitle: String {
+public enum ChannelStreamTitle: String, CaseIterable {
     case NPO1 = "LI_NL1_4188102"
     case NPO2 = "LI_NL2_4188105"
     case NPO3 = "LI_NL3_4188107"

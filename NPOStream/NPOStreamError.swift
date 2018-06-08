@@ -8,6 +8,12 @@
 
 import Foundation
 
-public enum NPOStreamError: Error {
-    case initialiseURLFailed
+public enum NPOStreamError: String, Error, LocalizedError {
+    case parsingAuthenticateURLFailed
+    case parsingChannelURLFailed
+    case channelSourceURLFailed
+
+    public var errorDescription: String? {
+        return self.rawValue
+    }
 }

@@ -20,10 +20,6 @@ extension String {
         }
     }
 
-    var decodeJSONUri: String {
-        return self.replacingOccurrences(of: "\\/", with: "/")
-    }
-    
     func htmlDecoded() -> String {
         guard (self != "") else { return self }
         var newStr = self
